@@ -18,6 +18,9 @@ const H1 = styled.h1`
 `;
 
 const HeroModal = ({ hero }) => {
+  const { available } = hero.comics;
+  const { url } = hero.urls[0];
+
   return (
     <>
       <ProfileImg
@@ -42,6 +45,23 @@ const HeroModal = ({ hero }) => {
           hero.description
         )}
       </div>
+      <footer>
+        <div className="projects">
+          <div>
+            <p>Comics Disponibles:</p>
+            <p>{available}</p>
+          </div>
+
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info"
+          >
+            Más Info
+          </a>
+        </div>
+      </footer>
     </>
   );
 };
