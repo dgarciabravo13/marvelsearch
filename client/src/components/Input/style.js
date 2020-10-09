@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-  width: 750px; 
-	border-collapse: collapse; 
+  width: 80vw; 
   margin:50px auto;
 `;
