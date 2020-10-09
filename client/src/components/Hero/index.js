@@ -65,7 +65,7 @@ const Hero = ({ hero }) => {
         alt={hero.name}
       />
       <H2>{hero.name}</H2>
-      <Btn onClick={toggleModal}>Detalles</Btn>
+      <Btn onClick={toggleModal}>Details</Btn>
 
       <Modal
         isOpen={isOpen}
@@ -76,7 +76,6 @@ const Hero = ({ hero }) => {
         closeTimeoutMS={500}
       >
         <HeroModal hero={hero} />
-        {/* <Btn onClick={toggleModal}>Cerrar</Btn> */}
       </Modal>
     </Card>
   );

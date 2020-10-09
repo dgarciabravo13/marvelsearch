@@ -31,15 +31,15 @@ const HeroModal = ({ hero }) => {
       <div className="description">
         {!hero.description ? (
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            In 1961, writer-editor Stan Lee revolutionized superhero comics by
+            introducing superheroes designed to appeal to older readers than the
+            predominantly child audiences of the medium, thus ushering what
+            Marvel later called the Marvel Age of Comics.Modern Marvel's
+            first superhero team, the titular stars of The Fantastic Four #1
+            (Nov. 1961),broke convention with other comic book archetypes
+            of the time by squabbling, holding grudges both deep and petty, and
+            eschewing anonymity or secret identities in favor of celebrity
+            status.
           </p>
         ) : (
           hero.description
@@ -48,7 +48,7 @@ const HeroModal = ({ hero }) => {
       <footer>
         <div className="projects">
           <div>
-            <p>Comics Disponibles:</p>
+            <p>Comics:</p>
             <p>{available}</p>
           </div>
 
@@ -58,7 +58,7 @@ const HeroModal = ({ hero }) => {
             rel="noopener noreferrer"
             className="info"
           >
-            Más Info
+            More Info
           </a>
         </div>
       </footer>
