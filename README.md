@@ -7,7 +7,7 @@
 
 ## What is this
 
-This is a search api of characters´s "Marvel Comics", where you can see his description and navigate to his personal page.
+This is a Marvel Comics characters´s API site, where you can see his description and navigate to the character personal page.
 
 ## Who
 
