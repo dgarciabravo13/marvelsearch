@@ -3,7 +3,7 @@ import HeroList from "./components/HeroList";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <HeroList/>
     </div>
   );
