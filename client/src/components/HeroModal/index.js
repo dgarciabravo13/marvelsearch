@@ -1,36 +1,47 @@
 import React from "react";
 import styled from "styled-components";
 
-const Img = styled.img`
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  min-width: 200px;
-  width: 250px;
-  min-height: 210px;
-  height: 210px;
-  object-fit: cover;
+const ProfileImg = styled.img`
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+`;
+
+const H1 = styled.h1`
+  margin-top: 10px;
 `;
 
 const HeroModal = ({ hero }) => {
   return (
     <>
-      {/* <Img
+      <ProfileImg
         src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
         alt={hero.name}
-      /> */}
-      {/* <h2>{hero.name}</h2> */}
-      {/* <p>{hero.description}</p> */}
-      <div id="login-container">
-      <div class="profile-img"></div>
-      <h1>{hero.name}</h1>
-      <div class="description">{hero.description}</div>
-      <footer>
-          <div class="projects">
-            <p>Projects</p>
-            <p>154</p>
-          </div>
-      </footer>
-</div>
+      />
+      <H1>{hero.name}</H1>
+      <div className="description">
+        {!hero.description ? (
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        ) : (
+          hero.description
+        )}
+      </div>
     </>
   );
 };

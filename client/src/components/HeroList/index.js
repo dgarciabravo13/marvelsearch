@@ -22,9 +22,10 @@ const HeroList = () => {
 
     async function fetchData() {
       try {
-        const response = await fetch(
-          `http://gateway.marvel.com/v1/public/characters?ts=1&limit=12&nameStartsWith=${name}&apikey=6e989ff5d88c497b48d0e952fddb7486&hash=6b7f1e9d88d7844d0941411e19183fbf`
-        );
+        const hash = process.env.REACT_APP_HASH;
+        const key = process.env.REACT_APP_PUBLIC_KEY;
+        const url = `http://gateway.marvel.com/v1/public/characters?ts=1&limit=12&nameStartsWith=${name}&apikey=${key}&hash=${hash}`;
+        const response = await fetch(url);
         const data = await response.json();
         setState(data.data.results);
       } catch (e) {
@@ -35,7 +36,9 @@ const HeroList = () => {
   }, [name]);
 
   const renderHeroes = () => {
-    return name.length === 0 ? null : state.map((hero, i) => <Hero key={i} hero={hero} />);
+    return name.length === 0
+      ? null
+      : state.map((hero, i) => <Hero key={i} hero={hero} />);
   };
 
   return (
