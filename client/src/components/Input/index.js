@@ -33,7 +33,6 @@ const Input = ({ setName }) => {
       <InputItem
         placeholder="Search your prefered hero"
         onChange={(e) => {
-          // e.preventDefault();
           setName(e.target.value);
         }}
       />
