@@ -6,9 +6,9 @@
 </p>
 
 ## What is this
-```sh
+
 This is a search api of characters´s "Marvel Comics", where you can see his description and navigate to his personal page.
-```
+
 ## Who
 
 - David García - Software Developer - https://www.linkedin.com/in/davidgarciabr/
