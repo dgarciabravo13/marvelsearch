@@ -48,6 +48,7 @@ const Btn = styled.button`
   text-transform:uppercase;
   color:white;
   font-weight: bold;
+  &:hover { background: #337aff; } 
 `;
 
 const Hero = ({ hero }) => {
